@@ -21,9 +21,27 @@ pipeline{
                 sh "docker run -d --net=SE --name app-test-container mrbacky/frontend-calc"
             }
         }
-    
-    
+
+        stage("Execute system tests"){
+            steps{
+               sh "selenium-side-runner --server http://localhost:4444/wd/hub -c "browserName=firefox" --base-url http://app-test-container test/system/FunctionalTests.side "
+               sh "selenium-side-runner --server http://localhost:4444/wd/hub -c "browserName=chrome" --base-url http://app-test-container test/system/FunctionalTests.side "
+
+            }
+        }
     }
 
-    
+    post{
+        cleanup{
+            echo "Cleaning the Docker environment"
+            sh script:"docker stop selenium-hub", returnStatus:true
+            sh script: "docker stop selenium-node-firefox" returnStatus: true
+            sh script: "docker stop selenium-node-chrome" returnStatus: true
+            sh script: "docker stop app-test-container" returnStatus: true
+            sh script: "docker network remove SE" returnStatus: true
+
+
+        }
+    }
+
 }
