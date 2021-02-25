@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    triggers {
+		cron("0 * * * *")
+		pollSCM("*5 * * * *")
+	}
     stages{
         stage("Deliver to Docker Hub"){
             steps{
