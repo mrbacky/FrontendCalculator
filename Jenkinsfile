@@ -12,7 +12,7 @@ pipeline{
                 {
                     sh 'docker login -u ${USERNAME} -p {PASSWORD}'
                 }
-                echo "docker push mrbacky/frontend-calc"
+                sh "docker push mrbacky/frontend-calc"
             }
         }
     
