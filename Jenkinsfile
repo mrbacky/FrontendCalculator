@@ -10,7 +10,7 @@ pipeline{
                 sh "docker build . -t mrbacky/frontend-calc"
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable: 'USERNAME',passwordVariable: 'PASSWORD']])
                 {
-                    sh 'docker login -u ${USERNAME} --password-stdin ${PASSWORD}'
+                    sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
                 }
                 sh "docker push mrbacky/frontend-calc"
             }
