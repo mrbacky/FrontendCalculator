@@ -18,18 +18,18 @@ pipeline{
     
         stage("Selenium grid setup"){
             steps{
-                sh "docker network create SE"
-                sh "docker run -d --rm -p 4444:4444 --net=SE --name selenium-hub selenium/hub"
-                sh "docker run -d --net=SE -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox" 
-                sh "docker run -d --net=SE -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node--chrome" 
-                sh "docker run -d --net=SE --name app-test-container mrbacky/frontend-calc"
+                sh "docker network create SE5"
+                sh "docker run -d --rm -p 55555:4444 --net=SE --name selenium-hub selenium/hub"
+                sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox" 
+                sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node--chrome" 
+                sh "docker run -d --net=SE5 --name app-test-container mrbacky/frontend-calc"
             }
         }
 
         stage("Execute system tests"){
             steps{
-               sh "selenium-side-runner --server http://localhost:4444/wd/hub -c browserName=firefox --base-url http://app-test-container test/system/FunctionalTests.side"
-               sh "selenium-side-runner --server http://localhost:4444/wd/hub -c browserName=chrome --base-url http://app-test-container test/system/FunctionalTests.side"
+               sh "selenium-side-runner --server http://localhost:55555/wd/hub -c browserName=firefox --base-url http://app-test-container test/system/FunctionalTests.side"
+               sh "selenium-side-runner --server http://localhost:55555/wd/hub -c browserName=chrome --base-url http://app-test-container test/system/FunctionalTests.side"
 
             }
         }
@@ -42,7 +42,7 @@ pipeline{
             sh script: "docker stop selenium-node-firefox", returnStatus: true
             sh script: "docker stop selenium-node-chrome", returnStatus: true
             sh script: "docker stop app-test-container", returnStatus: true
-            sh script: "docker network remove SE", returnStatus: true
+            sh script: "docker network remove SE5", returnStatus: true
 
 
         }
