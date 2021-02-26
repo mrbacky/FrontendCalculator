@@ -640,6 +640,135 @@
       ],
       "value": "-1"
     }]
+  }, {
+    "id": "a858afc3-1d73-4231-8aae-1a82ecff6a5d",
+    "name": "3 - 2 = 1",
+    "commands": [{
+      "id": "176ef017-adf1-497b-832f-72bd092735aa",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03668bab-7ffd-4a0d-8cce-391cf31207cb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1604x1099",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b76a5a0-b6e0-440f-a9d7-3077cceff02f",
+      "comment": "",
+      "command": "click",
+      "target": "id=number1",
+      "targets": [
+        ["id=number1", "id"],
+        ["css=#number1", "css:finder"],
+        ["xpath=//input[@id='number1']", "xpath:attributes"],
+        ["xpath=//div[@id='simple-calc']/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66b561f2-53b9-4f73-8a50-8127c8e658a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=number1",
+      "targets": [
+        ["id=number1", "id"],
+        ["css=#number1", "css:finder"],
+        ["xpath=//input[@id='number1']", "xpath:attributes"],
+        ["xpath=//div[@id='simple-calc']/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "e1f9870e-9b36-46b7-bafc-c474190209e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=operator",
+      "targets": [
+        ["id=operator", "id"],
+        ["css=#operator", "css:finder"],
+        ["xpath=//select[@id='operator']", "xpath:attributes"],
+        ["xpath=//div[@id='simple-calc']/form/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce0ee742-abf1-4468-94d6-02433d390abb",
+      "comment": "",
+      "command": "select",
+      "target": "id=operator",
+      "targets": [],
+      "value": "label=Minus"
+    }, {
+      "id": "6817eb07-f941-4a85-8767-87a0926cd845",
+      "comment": "",
+      "command": "click",
+      "target": "id=operator",
+      "targets": [
+        ["id=operator", "id"],
+        ["css=#operator", "css:finder"],
+        ["xpath=//select[@id='operator']", "xpath:attributes"],
+        ["xpath=//div[@id='simple-calc']/form/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6fc281e-cb94-45bf-b965-71af7426a543",
+      "comment": "",
+      "command": "click",
+      "target": "id=number2",
+      "targets": [
+        ["id=number2", "id"],
+        ["css=#number2", "css:finder"],
+        ["xpath=//input[@id='number2']", "xpath:attributes"],
+        ["xpath=//div[@id='simple-calc']/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e36f974-238a-4f6a-b586-fe705cafce60",
+      "comment": "",
+      "command": "type",
+      "target": "id=number2",
+      "targets": [
+        ["id=number2", "id"],
+        ["css=#number2", "css:finder"],
+        ["xpath=//input[@id='number2']", "xpath:attributes"],
+        ["xpath=//div[@id='simple-calc']/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "3c34147a-b4ec-43d9-b3fb-da9240b6f822",
+      "comment": "",
+      "command": "click",
+      "target": "css=#simple-calc .btn-primary",
+      "targets": [
+        ["css=#simple-calc .btn-primary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='simple-calc']/form/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Calculate')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53062681-3b42-48b0-b405-68b5733488c3",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=result",
+      "targets": [
+        ["id=result", "id"],
+        ["css=#result", "css:finder"],
+        ["xpath=//input[@id='result']", "xpath:attributes"],
+        ["xpath=//div[@id='simple-calc']/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }]
   }],
   "suites": [{
     "id": "0cd1119a-a2b3-4adb-bd7f-5cdc3c39fc1a",
@@ -647,7 +776,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["30947e45-c51b-4515-b466-fe2d5b6bebcb", "027af72c-3adb-464a-b8b4-99b33bc09c59", "f4e444ca-717b-4b8c-ab17-14781bba0096", "00bed0e1-0d75-4fdb-9ecc-c1cf35f0e3da", "640a224a-7e90-432b-8cfc-0f6c45a7f82d"]
+    "tests": ["30947e45-c51b-4515-b466-fe2d5b6bebcb", "027af72c-3adb-464a-b8b4-99b33bc09c59", "f4e444ca-717b-4b8c-ab17-14781bba0096", "00bed0e1-0d75-4fdb-9ecc-c1cf35f0e3da", "640a224a-7e90-432b-8cfc-0f6c45a7f82d", "a858afc3-1d73-4231-8aae-1a82ecff6a5d"]
   }],
   "urls": ["http://localhost:9999/", "http://localhost:7777/"],
   "plugins": []
