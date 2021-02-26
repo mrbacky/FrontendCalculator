@@ -1,4 +1,5 @@
 //  comment
+//  comment
 
 function calculate() {
     var number1 = parseFloat($("#number1").val());
