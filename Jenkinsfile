@@ -19,17 +19,17 @@ pipeline{
         stage("Selenium grid setup"){
             steps{
                 sh "docker network create SE5"
-                sh "docker run -d --rm -p 55555:4444 --net=SE5 --name selenium-hub selenium/hub"
-                sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox" 
-                sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node-chrome" 
-                sh "docker run -d --net=SE5 --name app-test-container mrbacky/frontend-calc"
+                sh "docker run -d --rm -p 55555:4444 --net=SE5 --name selenium-hub-5 selenium/hub"
+                sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub-5 --name selenium-node-firefox-5 selenium/node-firefox" 
+                sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub-5 --name selenium-node-chrome-5 selenium/node-chrome" 
+                sh "docker run -d --net=SE5 --name app-test-container-5 mrbacky/frontend-calc"
             }
         }
 
         stage("Execute system tests"){
             steps{
-               sh "selenium-side-runner --server http://localhost:55555/wd/hub -c browserName=firefox --base-url http://app-test-container test/system/FunctionalTests.side"
-               sh "selenium-side-runner --server http://localhost:55555/wd/hub -c browserName=chrome --base-url http://app-test-container test/system/FunctionalTests.side"
+               sh "selenium-side-runner --server http://localhost:55555/wd/hub -c browserName=firefox --base-url http://app-test-container-5 test/system/FunctionalTests.side"
+               sh "selenium-side-runner --server http://localhost:55555/wd/hub -c browserName=chrome --base-url http://app-test-container-5 test/system/FunctionalTests.side"
 
             }
         }
@@ -38,10 +38,10 @@ pipeline{
     post{
         cleanup{
             echo "Cleaning the Docker environment"
-            sh script:"docker stop selenium-hub", returnStatus:true
-            sh script: "docker stop selenium-node-firefox", returnStatus: true
-            sh script: "docker stop selenium-node-chrome", returnStatus: true
-            sh script: "docker stop app-test-container", returnStatus: true
+            sh script:"docker stop selenium-hub-5", returnStatus:true
+            sh script: "docker stop selenium-node-firefox-5", returnStatus: true
+            sh script: "docker stop selenium-node-chrome-5", returnStatus: true
+            sh script: "docker stop app-test-container-5", returnStatus: true
             sh script: "docker network remove SE5", returnStatus: true
 
 
