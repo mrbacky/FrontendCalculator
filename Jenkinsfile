@@ -21,7 +21,7 @@ pipeline{
                 sh "docker network create SE5"
                 sh "docker run -d --rm -p 55555:4444 --net=SE5 --name selenium-hub selenium/hub"
                 sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox" 
-                sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node--chrome" 
+                sh "docker run -d --net=SE5 -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node-chrome" 
                 sh "docker run -d --net=SE5 --name app-test-container mrbacky/frontend-calc"
             }
         }
