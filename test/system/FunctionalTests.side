@@ -1159,7 +1159,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["30947e45-c51b-4515-b466-fe2d5b6bebcb", "027af72c-3adb-464a-b8b4-99b33bc09c59", "f4e444ca-717b-4b8c-ab17-14781bba0096", "00bed0e1-0d75-4fdb-9ecc-c1cf35f0e3da", "640a224a-7e90-432b-8cfc-0f6c45a7f82d", "a858afc3-1d73-4231-8aae-1a82ecff6a5d"]
+    "tests": ["30947e45-c51b-4515-b466-fe2d5b6bebcb", "027af72c-3adb-464a-b8b4-99b33bc09c59", "f4e444ca-717b-4b8c-ab17-14781bba0096", "00bed0e1-0d75-4fdb-9ecc-c1cf35f0e3da", "640a224a-7e90-432b-8cfc-0f6c45a7f82d", "a858afc3-1d73-4231-8aae-1a82ecff6a5d", "ca8f4655-b64a-4839-b3c5-d7dad59cd6dc", "f66ee243-f7d4-42b9-a7b4-0dd739e8e383", "04bdfbb0-a3a5-4914-a58d-6ab026d14543"]
   }],
   "urls": ["http://localhost:9999/", "http://localhost:7777/"],
   "plugins": []
