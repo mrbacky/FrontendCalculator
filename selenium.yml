@@ -1,31 +1,29 @@
-version: '3.3'
+version: "3.3"
 
-services: 
+services:
   app:
-    hostname: app-host
+    hostname: app-host-5
     restart: always
     image: mrbacky/frontend-calc
-  hub: 
-    hostname: hub-host
+  hub:
+    hostname: hub-host-5
     restart: always
     image: selenium/hub
-    depends_on: 
+    depends_on:
       - app
-    ports: 
+    ports:
       - "4444:4444"
-
   firefox-node:
     restart: always
     image: selenium/node-firefox
-    depends_on: 
+    depends_on:
       - hub
-    environment: 
-      HUB_HOST: hub-host
-  
+    environment:
+      HUB_HOST: hub-host-5
   chrome-node:
     restart: always
     image: selenium/node_chrome
-    depends_on: 
+    depends_on:
       - hub
     environment:
-      HUB_HOST: hub-host
+      HUB_HOST: hub-host-5
