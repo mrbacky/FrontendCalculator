@@ -18,11 +18,7 @@ pipeline{
     
         stage("Selenium grid setup"){
             steps{
-                sh "docker network create SE-5"
-                sh "docker run -d --rm -p 55555:4444 --net=SE-5 --name selenium-hub-group-5 selenium/hub"
-                sh "docker run -d --rm --net=SE-5 -e HUB_HOST=selenium-hub-group-5 --name selenium-node-firefox-group-5 selenium/node-firefox" 
-                sh "docker run -d --rm --net=SE-5 -e HUB_HOST=selenium-hub-group-5 --name selenium-node-chrome-group-5 selenium/node-chrome" 
-                sh "docker run -d --rm --net=SE-5 --name app-test-container-group-5 mrbacky/frontend-calc"
+                sh "docker-compose -f selenium.yml up -d"
             }
         }
 
@@ -38,14 +34,7 @@ pipeline{
     post{
         cleanup{
             echo "Cleaning the Docker environment"
-            sh script:"docker stop selenium-hub-group-5", returnStatus:true
-            sh script: "docker stop selenium-node-firefox-group-5", returnStatus: true
-            sh script: "docker stop selenium-node-chrome-group-5", returnStatus: true
-            sh script: "docker stop app-test-container-group-5", returnStatus: true
-            sh script: "docker network remove SE-5", returnStatus: true
-
-
-
+            sh script: docker-compose -f selenium.yml down, returnStatus:true
         }
     }
 
