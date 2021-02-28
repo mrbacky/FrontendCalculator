@@ -24,7 +24,7 @@ pipeline{
 
         stage("Execute system tests"){
             steps{
-                sleep time: 5, unit:"SECONDS"
+                sleep time: 10, unit:"SECONDS"
                 sh "selenium-side-runner --server http://localhost:55555/wd/hub -c browserName=firefox --base-url http://app-host-5 test/system/FunctionalTests.side"
                 sh "selenium-side-runner --server http://localhost:55555/wd/hub -c browserName=chrome --base-url http://app-host-5 test/system/FunctionalTests.side"
 
