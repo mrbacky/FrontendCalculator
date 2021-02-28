@@ -22,7 +22,7 @@ services:
       HUB_HOST: hub-host-5
   chrome-node:
     restart: always
-    image: selenium/node_chrome
+    image: selenium/node-chrome
     depends_on:
       - hub
     environment:
