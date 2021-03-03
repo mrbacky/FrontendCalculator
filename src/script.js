@@ -41,7 +41,7 @@
 // }
 async function postData(url = '', data) {
     $("#error").val('errors will be displayed here');
-    const prefix = 'https://localhost:5001/api/';
+    const prefix = 'http://localhost:5555/api/';
     url = prefix + url;
       const response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
