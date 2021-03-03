@@ -1,10 +1,16 @@
 version: "3.3"
 
 services:
+  backend:
+    hostname: backend-host-5
+    restart: always
+    image: mrbacky/backend-calc
   app:
     hostname: app-host-5
     restart: always
     image: mrbacky/frontend-calc
+    depends_on:
+      - backend
   hub:
     hostname: hub-host-5
     restart: always
