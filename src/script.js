@@ -103,6 +103,10 @@ async function postData(url = '', data) {
                 });
                 break;
             case '/':
+                if (num2 < 1) {
+                    $("#result").val("Infinity")
+                    return;
+                }
                 postData('divide', numbers )
                 .then(data => {
                     console.log(data); // JSON data parsed by `data.json()` call
