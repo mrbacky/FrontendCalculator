@@ -5,8 +5,6 @@ services:
     hostname: backend-host-5
     restart: always
     image: mrbacky/backend-calc
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
   app:
     hostname: app-host-5
     restart: always

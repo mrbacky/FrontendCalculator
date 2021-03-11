@@ -41,7 +41,7 @@
 // }
 async function postData(url = '', data) {
     $("#error").val('errors will be displayed here');
-    const prefix = 'http://host.docker.internal:5555/api/';
+    const prefix = 'http://backend-host-5:5555/api/';
     url = prefix + url;
       const response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
