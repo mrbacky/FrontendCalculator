@@ -194,7 +194,7 @@
       "command": "waitForElementPresent",
       "target": "id=result",
       "targets": [],
-      "value": "5000"
+      "value": "10000"
     }, {
       "id": "e7194158-ef9c-466b-a9d4-0cf734500c10",
       "comment": "",
