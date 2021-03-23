@@ -86,6 +86,13 @@
       ],
       "value": ""
     }, {
+      "id": "7f9f6db3-bfae-4af4-a86d-0aaa5552d309",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "e295be58-ce67-455d-89ea-a814907e0314",
       "comment": "",
       "command": "assertValue",
@@ -182,6 +189,13 @@
       ],
       "value": ""
     }, {
+      "id": "661b979d-67c1-4022-abc8-ac194e51e516",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "e7194158-ef9c-466b-a9d4-0cf734500c10",
       "comment": "",
       "command": "assertValue",
@@ -277,6 +291,13 @@
         ["xpath=//button[contains(.,'Reset')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "0229b623-82d4-40a5-a9e0-9ab0e954dde3",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "ceb8a33f-b575-4d33-a1c3-6ea63cbf089c",
       "comment": "",
@@ -446,6 +467,13 @@
       ],
       "value": ""
     }, {
+      "id": "0ffad0c1-e490-4378-bd2e-e032baf96f6a",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "1486e84a-ee1e-43fe-8e35-59b5713700b3",
       "comment": "",
       "command": "assertValue",
@@ -587,6 +615,13 @@
         ["xpath=//button[contains(.,'Calculate')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "95d78430-fa18-4ec2-885c-9d6f0581f2a7",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "a0c71266-d15e-43f6-84ac-ba83432fa1e1",
       "comment": "",
@@ -756,6 +791,13 @@
       ],
       "value": ""
     }, {
+      "id": "3a037cd1-f0ed-4348-9dcb-963702863de8",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "53062681-3b42-48b0-b405-68b5733488c3",
       "comment": "",
       "command": "assertValue",
@@ -825,6 +867,13 @@
       ],
       "value": ""
     }, {
+      "id": "70a6d229-7979-4ed5-9b98-1dd03ca5bdec",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "216ec218-eeaf-484b-95e6-3e1d3b60bf87",
       "comment": "",
       "command": "assertValue",
@@ -893,6 +942,13 @@
         ["xpath=//div[2]/form/div[3]/div/button", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "ed0f9d13-4c9c-4bf6-9b67-c109f9fb9cb6",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "9434dfb4-fe7b-4f2a-bc42-fd60f52d3b6b",
       "comment": "",
@@ -1073,6 +1129,13 @@
         ["xpath=//div[2]/form/div[5]/div/button", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "1e73c5e4-93e6-4efe-b591-8c00eddcf865",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "59a010a4-68b0-4a4a-9571-d47852563077",
       "comment": "",
